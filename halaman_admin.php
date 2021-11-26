@@ -10,13 +10,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
  if($_SESSION['level']==""){
   header("location:index.php?pesan=gagal");
  }
-
+ if($_SESSION['level']=="biasa"){
+  header("location:halaman_biasa.php?pesan=gagal");
+ }
  ?>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin Website</title>
+ <link rel="shortcut icon" href="favicon.ico"> 
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -115,37 +118,66 @@ scratch. This page gets rid of all links and provides the needed markup only.
                with font-awesome or any other icon font library -->
           <li class="nav-item menu-open">
             <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+            <i class="fas fa-caret-circle-down"></i>
               <p>
-                Starter Pages
-                <i class="right fas fa-angle-left"></i>
+              <i class="far fa-caret-square-down"></i>
+                Laporan Harian
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="#" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Active Page</p>
+                  <p>Pembebanan Trafo dan Jaringan Transmisi</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                  <p>Counter Tap OLTC</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Inactive Page</p>
+                  <p>Suhu Trafo</p>
                 </a>
               </li>
             </ul>
           </li>
-          <li class="nav-item">
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link active">
+              <i class="far fa-caret-square-down"></i>
+                Laporan Mingguan
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Arus Bocor</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                  <p>DC GROUND</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>RECTIFIER</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+        <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Simple Link
-                <span class="right badge badge-danger">New</span>
-              </p>
+            <i class="far fa-caret-square-down"></i>
+                Laporan Bulanan
             </a>
           </li>
-        </ul>
+      </ul>
       </nav>
       <!-- /.sidebar-menu -->
     </div>
@@ -159,7 +191,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Starter Page</h1>
+            <h1 class="m-0">Home Page</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -179,33 +211,42 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <div class="col-lg-6">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-
+                <h5 class="card-title">Laporan Harian</h5>
                 <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the card's
-                  content.
-                </p>
-
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
+                  Laporan dari kegiatan checklist harian.</p>
+                  Pembebanan Trafo dan Jaringan Transmisi
+                </p> Counter Tap OLTC </p>Suhu Trafo</p>
+                <!-- <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a> -->
               </div>
             </div>
 
             <div class="card card-primary card-outline">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-
+                <h5 class="card-title">Laporan Mingguan</h5>
                 <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the card's
-                  content.
-                </p>
+                  Laporan kegiatan checklist mingguan.</p>
+                  Arus Bocor
+                </p> DC Ground </p>Rectifier</p>
+                <!-- </p>
                 <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
+                <a href="#" class="card-link">Another link</a> -->
               </div>
             </div><!-- /.card -->
           </div>
+          <div class="card card-primary card-outline">
+              <div class="card-body">
+                <h5 class="card-title">Laporan Bulanan</h5>
+                <p class="card-text">
+                  Laporan kegiatan checklist bulanan.</p>
+                  Arus Bocor
+                </p> DC Ground </p>Rectifier</p>
+              </div>
+            </div><!-- /.card -->
+
+
           <!-- /.col-md-6 -->
-          <div class="col-lg-6">
+          <!-- <div class="col-lg-6">
             <div class="card">
               <div class="card-header">
                 <h5 class="m-0">Featured</h5>
@@ -229,9 +270,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <a href="#" class="btn btn-primary">Go somewhere</a>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- /.col-md-6 -->
-        </div>
+       </div> 
         <!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
@@ -253,10 +294,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <footer class="main-footer">
     <!-- To the right -->
     <div class="float-right d-none d-sm-inline">
-      Anything you want
+      Laporkan Segera.
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2021 <a href="#">diFAP</a>.</strong> 
   </footer>
 </div>
 <!-- ./wrapper -->

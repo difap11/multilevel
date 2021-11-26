@@ -13,6 +13,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Login</title>
+  <link rel="shortcut icon" href="favicon.ico"> 
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -50,7 +51,7 @@
           <input type="text" name="username" class="form-control" placeholder="username" required="required">
           <div class="input-group-append">
             <div class="input-group-text">
-              <span class="fas fa-envelope"></span>
+              <i class="fas fa-user-circle"></i>
             </div>
           </div>
         </div>
@@ -65,7 +66,7 @@
         <div class="row">
           <div class="col-8">
             <div class="icheck-primary">
-              <input type="checkbox" id="remember">
+              <input type="checkbox" name="rememberme" id="remember">
               <label for="remember">
                 Remember Me
               </label>
